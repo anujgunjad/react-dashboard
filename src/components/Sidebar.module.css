@@ -1,0 +1,60 @@
+.sdbr_wrp {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #ffff;
+  overflow-y: scroll; /* Add the ability to scroll */
+  max-width: 260px;
+  position: fixed;
+}
+
+.sdbr_wrp::-webkit-scrollbar {
+  display: none;
+}
+
+.sdbr_icn {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.sdbr_icn img {
+  width: 35px;
+  height: 35px;
+  margin-right: 14px;
+}
+
+.sdbr_icn span {
+  font-size: 1.45rem;
+  letter-spacing: 0.01rem;
+  font-weight: bolder;
+  color: var(--primary);
+}
+
+.nav_menu {
+  padding: 0 1.25rem;
+}
+
+.nav_menu_itm {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 14px 0px;
+}
+
+.nav_menu_itm span {
+  margin-left: 10px;
+  color: #565360;
+  font-size: 1rem;
+}
+
+.nav_header {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+  color: var(--nav_head);
+  font-weight: 700;
+}

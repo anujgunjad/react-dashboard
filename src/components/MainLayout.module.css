@@ -1,0 +1,85 @@
+.main_layout_wrp {
+  margin: 20px 30px 0px 290px;
+  width: 100%;
+}
+
+.header_wrp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right_icons {
+  display: flex;
+}
+
+.profile_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.profile_section {
+  display: flex;
+  align-items: center;
+}
+
+.profile_pic {
+  width: 40px;
+}
+
+.profile_pic img {
+  border-radius: 50px;
+  width: 100%;
+}
+
+.profile_name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.profile_desc {
+  font-size: 13px;
+}
+
+.card_wrp {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(265px, 1fr)
+  ); /* Where the magic happens */
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.first_card {
+  padding: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  background-color: #7f74f0;
+  height: 222px;
+}
+
+.second_card {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(135px, 1fr)
+  ); /* Where the magic happens */
+  grid-gap: 30px;
+}
+
+.card_wrp2 {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(265px, 1fr)
+  ); /* Where the magic happens */
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.first_card2 {
+  display: flex;
+  align-items: center;
+}
