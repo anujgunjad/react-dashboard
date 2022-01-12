@@ -237,7 +237,7 @@ const MainLayout = () => {
             <PieChart width={400} height={400}>
               <Pie
                 data={data_pie}
-                cx={580}
+                cx={380}
                 cy={160}
                 innerRadius={80}
                 outerRadius={100}
