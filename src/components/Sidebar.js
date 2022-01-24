@@ -13,6 +13,7 @@ const Sidebar = () => {
       </div>
       <nav className={classes.nav_menu}>
         <ul>
+          {/*Top Header*/}
           <li className={classes.nav_menu_itm}>
             <HomeOutlinedIcon />
             <span>Dashboard</span>
@@ -25,6 +26,8 @@ const Sidebar = () => {
             <HomeOutlinedIcon />
             <span>Analytics</span>
           </li>
+
+          {/*Header List one*/}
 
           <li className={classes.nav_header}>
             <span>APPS & PAGES</span>
@@ -62,6 +65,8 @@ const Sidebar = () => {
             <HomeOutlinedIcon />
             <span>eCommerce</span>
           </li>
+
+          {/*Header List two*/}
 
           <li className={classes.nav_header}>
             <span>USER INTERFACE</span>

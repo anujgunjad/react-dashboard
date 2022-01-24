@@ -1,21 +1,16 @@
 import React from "react";
 import classes from "./MainLayout.module.css";
-import CalendarTodayOutlinedIcon from "@material-ui/icons/CalendarTodayOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
-import MailOutlineOutlinedIcon from "@material-ui/icons/MailOutlineOutlined";
-import BookmarkAddedOutlinedIcon from "@material-ui/icons/BookmarkBorderOutlined";
-import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
-
-import DarkModeOutlinedIcon from "@material-ui/icons/NightsStayOutlined";
-import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
-import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
-import { IconButton } from "@material-ui/core";
 
 import Card from "./UI/Card";
-
+import { Button } from "@material-ui/core";
+import Header from "./Header";
 import StickyHeadTable from "./TableComponent";
 import SpiderChart from "./UI/SpiderChart";
+import { Avatar } from "@material-ui/core/";
+import { EmojiEvents } from "@material-ui/icons";
+import { GroupOutlined } from "@material-ui/icons";
+import BannerImg1 from "../assets/images/banner_dec1.png";
+import BannerImg2 from "../assets/images/banner_dec2.png";
 import {
   PieChart,
   Pie,
@@ -32,6 +27,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { width } from "@mui/system";
 
 const data = [
   {
@@ -115,63 +111,37 @@ const MainLayout = () => {
   return (
     <div className={classes.main_layout_wrp}>
       {/*Header*/}
-      <Card style={{ marginBottom: "22px" }}>
-        <nav className={classes.header_wrp}>
-          <div className="left_icons">
-            <IconButton style={{ width: 48, height: 48 }}>
-              <CalendarTodayOutlinedIcon style={{ fontSize: 25 }} />
-            </IconButton>
-
-            <IconButton style={{ width: 48, height: 48 }}>
-              <ChatBubbleOutlineOutlinedIcon style={{ fontSize: 25 }} />
-            </IconButton>
-
-            <IconButton style={{ width: 48, height: 48 }}>
-              <MailOutlineOutlinedIcon style={{ fontSize: 25 }} />
-            </IconButton>
-            <IconButton style={{ width: 48, height: 48 }}>
-              <BookmarkAddedOutlinedIcon style={{ fontSize: 25 }} />
-            </IconButton>
-            <IconButton style={{ width: 48, height: 48 }}>
-              <StarBorderOutlinedIcon style={{ fontSize: 25 }} />
-            </IconButton>
-          </div>
-
-          <div className={classes.right_icons}>
-            <div className="icon_group">
-              <IconButton>
-                <DarkModeOutlinedIcon style={{ fontSize: 25 }} />
-              </IconButton>
-              <IconButton>
-                <SearchOutlinedIcon style={{ fontSize: 25 }} />
-              </IconButton>
-              <IconButton>
-                <ShoppingCartOutlinedIcon style={{ fontSize: 25 }} />
-              </IconButton>
-              <IconButton>
-                <NotificationsNoneOutlinedIcon style={{ fontSize: 25 }} />
-              </IconButton>
-            </div>
-
-            <div className={classes.profile_section}>
-              <div className={classes.profile_txt}>
-                <span className={classes.profile_name}>John Doe</span>
-                <span className={classes.profile_desc}>admin</span>
-              </div>
-              <div className={classes.profile_pic}>
-                <img
-                  src="https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/13-small.d796bffd.png"
-                  alt="profile"
-                />
-              </div>
-            </div>
-          </div>
-        </nav>
-      </Card>
+      <Header />
 
       <div className={classes.card_wrp}>
         <div className={classes.first_card}>
-          <p>Hello</p>
+          <img
+            src={BannerImg1}
+            style={{ width: "200px", top: 0, float: "left" }}
+          ></img>
+
+          <img
+            src={BannerImg2}
+            style={{ width: "175px", float: "right" }}
+          ></img>
+          <span className={classes.first_card_award}>
+            <Avatar
+              style={{
+                backgroundColor: "#7367F0",
+                width: "70px",
+                height: "70px",
+                boxShadow: "0 1px 5px 0 rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              <EmojiEvents style={{ fontSize: "35px" }} />
+            </Avatar>
+          </span>
+
+          <h2 style={{ marginTop: "125px" }}>Congratulations John,</h2>
+          <p style={{ marginTop: "15px", fontSize: "14px" }}>
+            You have done 57.6% more sales today. Check your new badge in your
+            profile.
+          </p>
         </div>
 
         <div className={classes.second_card}>
@@ -181,8 +151,40 @@ const MainLayout = () => {
               backgroundColor: "#fffff",
             }}
           >
-            <p style={{ marginBottom: "40px" }}>Hello</p>
-            <ResponsiveContainer width="100%" height="100%">
+            <div
+              className="second_card_body"
+              style={{ marginLeft: "10px", marginTop: "10px" }}
+            >
+              <Avatar
+                style={{
+                  backgroundColor: "#EEEDFD",
+                  width: "45px",
+                  height: "45px",
+                  marginBottom: "10px",
+                }}
+              >
+                <GroupOutlined style={{ color: "#8884d8" }} />
+              </Avatar>
+              <h3
+                style={{
+                  fontSize: "22px",
+                  color: "#000",
+                  fontWeight: "bolder",
+                }}
+              >
+                <b>92.6k</b>
+              </h3>
+              <p
+                style={{
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                  color: "grey",
+                }}
+              >
+                Subscribers Gained
+              </p>
+            </div>
+            <ResponsiveContainer width="100%" height="60%">
               <LineChart width={300} height={100} data={data}>
                 <Line
                   type="monotone"
@@ -199,13 +201,45 @@ const MainLayout = () => {
               backgroundColor: "#fffff",
             }}
           >
-            <p style={{ marginBottom: "40px" }}>Hello</p>
-            <ResponsiveContainer width="100%" height="100%">
+            <div
+              className="second_card_body"
+              style={{ marginLeft: "10px", marginTop: "10px" }}
+            >
+              <Avatar
+                style={{
+                  backgroundColor: "#FFF3E8",
+                  width: "45px",
+                  height: "45px",
+                  marginBottom: "10px",
+                }}
+              >
+                <GroupOutlined style={{ color: "#FF9F43" }} />
+              </Avatar>
+              <h3
+                style={{
+                  fontSize: "22px",
+                  color: "#000",
+                  fontWeight: "bolder",
+                }}
+              >
+                <b>32k</b>
+              </h3>
+              <p
+                style={{
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                  color: "grey",
+                }}
+              >
+                Subscribers Gained
+              </p>
+            </div>
+            <ResponsiveContainer width="100%" height="60%">
               <LineChart width={300} height={100} data={data}>
                 <Line
                   type="monotone"
                   dataKey="pv"
-                  stroke="#8884d8"
+                  stroke="#FF9F43"
                   strokeWidth={2}
                 />
               </LineChart>
@@ -221,11 +255,22 @@ const MainLayout = () => {
             backgroundColor: "#fffff",
           }}
         >
-          <ResponsiveContainer width="50%" height="100%">
-            <BarChart width={150} height={40} data={data}>
+          <div className={classes.card_wrp2_containers}>
+            <div className="wrp2_container_one">
+              <h3>2.7k</h3>
+              <p>Avg Sessions</p>
+
+              <p>+5.2%vs last 7 days</p>
+
+              <Button variant="contained" href="#contained-buttons">
+                Link
+              </Button>
+            </div>
+
+            <BarChart width={250} height={240} data={data}>
               <Bar dataKey="uv" fill="#8884d8" />
             </BarChart>
-          </ResponsiveContainer>
+          </div>
         </Card>
         <Card
           style={{
@@ -237,7 +282,7 @@ const MainLayout = () => {
             <PieChart width={400} height={400}>
               <Pie
                 data={data_pie}
-                cx={380}
+                cx={280}
                 cy={160}
                 innerRadius={80}
                 outerRadius={100}
