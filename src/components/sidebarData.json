@@ -1,0 +1,76 @@
+{
+  "data_one": [
+    {
+      "icon": "home",
+      "title": "Dashboards"
+    },
+    {
+      "icon": "store",
+      "title": "eCommerce"
+    },
+    {
+      "icon": "analytics",
+      "title": "Analytics"
+    }
+  ],
+  "data_two": [
+    {
+      "icon": "email",
+      "title": "Email"
+    },
+    {
+      "icon": "chat",
+      "title": "Chat"
+    },
+    {
+      "icon": "summarize",
+      "title": "Todo"
+    },
+    {
+      "icon": "event",
+      "title": "Calendar"
+    },
+    {
+      "icon": "receipt",
+      "title": "Invoice"
+    },
+    {
+      "icon": "ecommerce",
+      "title": "eCommerce"
+    },
+    {
+      "icon": "person",
+      "title": "User"
+    },
+    {
+      "icon": "pages",
+      "title": "Pages"
+    }
+  ],
+  "data_three": [
+    {
+      "icon": "create",
+      "title": "Typography"
+    },
+    {
+      "icon": "water",
+      "title": "Colors"
+    },
+    {
+      "icon": "addcard",
+      "title": "Cards"
+    },
+    {
+      "icon": "create",
+      "title": "Typography"
+    },
+    {
+      "icon": "water",
+      "title": "Colors"
+    },
+    {
+      "icon": "addcard",
+      "title": "Cards"
+    }
+  ]
+}

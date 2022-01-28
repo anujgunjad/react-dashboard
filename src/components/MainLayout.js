@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./MainLayout.module.css";
-
+import { TrendingUpIcon } from "@material-ui/icons";
+import { Box } from "@material-ui/core";
 import Card from "./UI/Card";
 import { Button } from "@material-ui/core";
 import Header from "./Header";
@@ -9,6 +10,7 @@ import SpiderChart from "./UI/SpiderChart";
 import { Avatar } from "@material-ui/core/";
 import { EmojiEvents } from "@material-ui/icons";
 import { GroupOutlined } from "@material-ui/icons";
+import Stepper from "./UI/Stepper";
 import BannerImg1 from "../assets/images/banner_dec1.png";
 import BannerImg2 from "../assets/images/banner_dec2.png";
 import {
@@ -249,41 +251,125 @@ const MainLayout = () => {
       </div>
 
       <div className={classes.card_wrp2}>
-        <Card
-          style={{
-            height: "322px",
-            backgroundColor: "#fffff",
-          }}
-        >
-          <div className={classes.card_wrp2_containers}>
-            <div className="wrp2_container_one">
-              <h3>2.7k</h3>
-              <p>Avg Sessions</p>
-
-              <p>+5.2%vs last 7 days</p>
-
-              <Button variant="contained" href="#contained-buttons">
-                Link
-              </Button>
-            </div>
-
-            <BarChart width={250} height={240} data={data}>
-              <Bar dataKey="uv" fill="#8884d8" />
-            </BarChart>
+        <div className={classes.first_card2}>
+          <div className="first_card2_sec1" style={{ width: "60%" }}>
+            <Box
+              sx={{
+                bgcolor: "background.paper",
+                boxShadow: 1,
+                borderRadius: 1,
+                p: 2,
+                minWidth: 300,
+              }}
+            >
+              <Box sx={{ color: "text.secondary" }}>Sessions</Box>
+              <Box
+                sx={{
+                  color: "text.primary",
+                  fontSize: 34,
+                  fontWeight: "medium",
+                }}
+              >
+                98.3 K
+              </Box>
+              <Box
+                component={GroupOutlined}
+                sx={{
+                  color: "success.dark",
+                  fontSize: 16,
+                  verticalAlign: "sub",
+                }}
+              />
+              <Box
+                sx={{
+                  color: "success.dark",
+                  display: "inline",
+                  fontWeight: "medium",
+                  mx: 0.5,
+                }}
+              >
+                18.77%
+              </Box>
+              <Box
+                sx={{
+                  color: "text.secondary",
+                  display: "inline",
+                  fontSize: 12,
+                }}
+              >
+                vs. last week
+              </Box>
+            </Box>
+            <Button
+              variant="contained"
+              style={{
+                width: "100%",
+                backgroundColor: "#7367F0",
+                color: "#fff",
+                marginTop: "130px",
+              }}
+            >
+              View Details
+            </Button>
           </div>
-        </Card>
-        <Card
-          style={{
-            height: "322px",
-            backgroundColor: "#fffff",
-          }}
-        >
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart width={150} height={20} data={data}>
+              <Bar dataKey="uv" fill="#7367F0" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        <div className={classes.first_card2}>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              boxShadow: 1,
+              borderRadius: 1,
+              p: 2,
+              minWidth: 200,
+            }}
+          >
+            <Box sx={{ color: "text.secondary" }}>Terms</Box>
+            <Box
+              sx={{
+                color: "text.primary",
+                fontSize: 34,
+                fontWeight: "medium",
+              }}
+            >
+              108 K
+            </Box>
+            <Box
+              component={GroupOutlined}
+              sx={{
+                color: "success.dark",
+                fontSize: 16,
+                verticalAlign: "sub",
+              }}
+            />
+            <Box
+              sx={{
+                color: "success.dark",
+                display: "inline",
+                fontWeight: "medium",
+                mx: 0.5,
+              }}
+            >
+              18.77%
+            </Box>
+            <Box
+              sx={{
+                color: "text.secondary",
+                display: "inline",
+                fontSize: 12,
+              }}
+            >
+              vs. last week
+            </Box>
+          </Box>
           <ResponsiveContainer>
             <PieChart width={400} height={400}>
               <Pie
                 data={data_pie}
-                cx={280}
-                cy={160}
                 innerRadius={80}
                 outerRadius={100}
                 fill="#8884d8"
@@ -299,30 +385,17 @@ const MainLayout = () => {
               </Pie>
             </PieChart>
           </ResponsiveContainer>
-        </Card>
+        </div>
       </div>
 
       <div className={classes.card_wrp2}>
-        <Card
-          style={{
-            height: "322px",
-            backgroundColor: "#fffff",
-          }}
-        ></Card>
-        <Card
-          style={{
-            height: "322px",
-            backgroundColor: "#fffff",
-          }}
-        >
+        <div className={classes.first_card2}></div>
+        <div className={classes.first_card2}>
           <SpiderChart />
-        </Card>
-        <Card
-          style={{
-            height: "322px",
-            backgroundColor: "#fffff",
-          }}
-        ></Card>
+        </div>
+        <div className={classes.first_card2}>
+          <Stepper />
+        </div>
       </div>
 
       <div className={classes.card_wrp2}>

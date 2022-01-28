@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./Sidebar.module.css";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
+import Icon from "@mui/material/Icon";
+
+const sidebarData = require("./sidebarData.json");
+
+const SidebarIconStyle = {
+  margin: 0,
+  width: "1em",
+  height: "1em",
+  display: "inline-block",
+  fontSize: "1.5rem",
+};
+
 const Sidebar = () => {
   return (
     <div className={classes.sdbr_wrp}>
@@ -14,18 +26,18 @@ const Sidebar = () => {
       <nav className={classes.nav_menu}>
         <ul>
           {/*Top Header*/}
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Dashboard</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>eCommerce</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Analytics</span>
-          </li>
+
+          {sidebarData.data_one.map((el, i) => (
+            <li key={i} className={classes.nav_menu_itm}>
+              <Icon
+                style={SidebarIconStyle}
+                baseClassName="material-icons-outlined"
+              >
+                {el.icon}
+              </Icon>
+              <span> {el.title}</span>
+            </li>
+          ))}
 
           {/*Header List one*/}
 
@@ -33,38 +45,17 @@ const Sidebar = () => {
             <span>APPS & PAGES</span>
           </li>
 
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Dashboard</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>eCommerce</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Analytics</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Dashboard</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>eCommerce</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Analytics</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Dashboard</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>eCommerce</span>
-          </li>
+          {sidebarData.data_two.map((el, i) => (
+            <li key={i} className={classes.nav_menu_itm}>
+              <Icon
+                style={SidebarIconStyle}
+                baseClassName="material-icons-outlined"
+              >
+                {el.icon}
+              </Icon>
+              <span> {el.title}</span>
+            </li>
+          ))}
 
           {/*Header List two*/}
 
@@ -72,38 +63,17 @@ const Sidebar = () => {
             <span>USER INTERFACE</span>
           </li>
 
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Dashboard</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>eCommerce</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Analytics</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Dashboard</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>eCommerce</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Analytics</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>Dashboard</span>
-          </li>
-          <li className={classes.nav_menu_itm}>
-            <HomeOutlinedIcon />
-            <span>eCommerce</span>
-          </li>
+          {sidebarData.data_three.map((el, i) => (
+            <li key={i} className={classes.nav_menu_itm}>
+              <Icon
+                style={SidebarIconStyle}
+                baseClassName="material-icons-outlined"
+              >
+                {el.icon}
+              </Icon>
+              <span> {el.title}</span>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>

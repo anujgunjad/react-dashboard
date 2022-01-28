@@ -45,8 +45,14 @@
 }
 
 .first_card2 {
+  padding: 0rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  background-color: #ffffff;
+  height: 300px;
+  position: relative;
   display: flex;
-  align-items: center;
+  padding: 10px;
 }
 
 .first_card_banner_img {
@@ -60,12 +66,14 @@
   transform: translate(-50%, -50%);
 }
 
-.card_wrp2_containers {
+/* .card_wrp2_containers {
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-around;
+  box-sizing: border-box;
+  flex-wrap: wrap-reverse;
+} */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .main_layout_wrp {
     margin: 20px 30px 0px 30px;
     width: 100%;
