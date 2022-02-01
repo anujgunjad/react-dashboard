@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classes from "./Sidebar.module.css";
-import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import Icon from "@mui/material/Icon";
 
 const sidebarData = require("./sidebarData.json");
@@ -10,7 +9,7 @@ const SidebarIconStyle = {
   width: "1em",
   height: "1em",
   display: "inline-block",
-  fontSize: "1.5rem",
+  fontSize: "2.3rem",
 };
 
 const Sidebar = () => {

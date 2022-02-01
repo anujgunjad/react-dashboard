@@ -115,7 +115,7 @@ const MainLayout = () => {
       {/*Header*/}
       <Header />
 
-      <div className={classes.card_wrp}>
+      {/* <div className={classes.card_wrp}>
         <div className={classes.first_card}>
           <img
             src={BannerImg1}
@@ -402,7 +402,7 @@ const MainLayout = () => {
         <Card>
           <StickyHeadTable />
         </Card>
-      </div>
+      </div> */}
     </div>
   );
 };
