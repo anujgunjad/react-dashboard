@@ -1,81 +1,78 @@
 .main_layout_wrp {
-  margin: 20px 30px 0px 290px;
+  padding: 2rem 3rem 0rem 29rem;
   width: 100%;
   transition: all 0.4s;
 }
 
-.card_wrp {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(265px, 1fr)
-  ); /* Where the magic happens */
-  grid-gap: 30px;
-  margin-bottom: 30px;
+/*Row 1 styling*/
+
+.main_layout_row_one {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 3rem;
 }
 
-.first_card {
+/*Banner 1*/
+
+.row_one_banner {
+  flex: 0 0 50%;
   padding: 0rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 8px;
+  box-shadow: 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.2),
+    0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.8rem;
   background-color: #7f74f0;
-  height: 241px;
+  height: 24.1rem;
   position: relative;
   text-align: center;
   color: #ffff;
 }
 
-.second_card {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(135px, 1fr)
-  ); /* Where the magic happens */
-  grid-gap: 30px;
+.banner_one_image_one {
+  width: 200px;
+  top: 0;
+  float: left;
 }
 
-.card_wrp2 {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(265px, 1fr)
-  ); /* Where the magic happens */
-  grid-gap: 30px;
-  margin-bottom: 30px;
-}
-
-.first_card2 {
-  padding: 0rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 8px;
-  background-color: #ffffff;
-  height: 300px;
-  position: relative;
-  display: flex;
-  padding: 10px;
-}
-
-.first_card_banner_img {
-  position: relative;
-}
-
-.first_card_award {
+.banner_one_award {
   position: absolute;
   top: 28%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* .card_wrp2_containers {
-  display: flex;
-  justify-content: space-around;
-  box-sizing: border-box;
-  flex-wrap: wrap-reverse;
-} */
+.banner_one_avatar {
+  background-color: #7367f0 !important;
+  width: 7rem !important;
+  height: 7rem !important;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.banner_one_emoji {
+  font-size: 3.5rem !important;
+}
+
+.banner_one_image_two {
+  width: 175px;
+  float: right;
+}
+
+.row_one_graph_one {
+  flex: 1 0 auto;
+  max-width: 100%;
+  background-color: #fff;
+}
+
+.row_one_graph_two {
+  flex: 1 0 auto;
+  max-width: 100%;
+  background-color: #fff;
+}
 
 @media only screen and (max-width: 1200px) {
   .main_layout_wrp {
-    margin: 20px 30px 0px 30px;
-    width: 100%;
+    padding: 2rem 3rem;
+  }
+  .row_one_banner {
+    flex: 0 0 100%;
   }
 }

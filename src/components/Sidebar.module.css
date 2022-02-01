@@ -1,12 +1,12 @@
 .sdbr_wrp {
+  position: fixed;
   display: flex;
-  flex-direction: column;
   width: 26rem;
+  max-width: 26rem;
+  flex-direction: column;
   height: 100vh;
   background-color: #ffff;
   overflow-y: scroll; /* Add the ability to scroll */
-  max-width: 26rem;
-  position: fixed;
   scrollbar-width: none; /* Firefox 64 */
 }
 
