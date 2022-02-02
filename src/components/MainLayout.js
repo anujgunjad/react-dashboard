@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./MainLayout.module.css";
 import Header from "./Header";
 import Card from "./UI/Card";
-
+import { ResponsiveContainer } from "recharts";
 import { GroupOutlined } from "@material-ui/icons";
 import { TrendingUpIcon } from "@material-ui/icons";
 import { Box } from "@material-ui/core";
@@ -26,28 +26,49 @@ const MainLayout = () => {
 
       <div className={classes.main_layout_row_one}>
         <div className={classes.row_one_banner}>
-          <img src={BannerImg1} className={classes.banner_one_image_one}></img>
+          {/* <div className={classes.chart_container}>
+            <LineDemo />
+          </div> */}
+          <div className={classes.banner_body}>
+            <img
+              src={BannerImg1}
+              className={classes.banner_one_image_one}
+            ></img>
 
-          <img src={BannerImg2} className={classes.banner_one_image_two}></img>
+            <img
+              src={BannerImg2}
+              className={classes.banner_one_image_two}
+            ></img>
 
-          <span className={classes.banner_one_award}>
-            <Avatar className={classes.banner_one_avatar}>
-              <EmojiEvents className={classes.banner_one_emoji} />
-            </Avatar>
-          </span>
+            <span className={classes.banner_one_award}>
+              <Avatar className={classes.banner_one_avatar}>
+                <EmojiEvents className={classes.banner_one_emoji} />
+              </Avatar>
+            </span>
 
-          <h2 style={{ marginTop: "125px" }}>Congratulations John,</h2>
-          <p style={{ marginTop: "15px", fontSize: "14px" }}>
-            You have done 57.6% more sales today. Check your new badge in your
-            profile.
-          </p>
+            <div className={classes.banner_body_text}>
+              <h2>Congratulations John</h2>
+              <p>
+                You have done 57.6% more sales today. Check your new badge in
+                your profile.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className={classes.row_one_graph_one}>
+          {/* <div className={classes.chart_container}>
+            <LineDemo />
+          </div> */}
+
           <LineDemo />
         </div>
 
         <div className={classes.row_one_graph_two}>
+          {/* <div className={classes.chart_container}>
+            <LineDemo />
+          </div> */}
+
           <LineDemo />
         </div>
       </div>

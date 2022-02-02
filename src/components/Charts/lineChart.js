@@ -26,6 +26,8 @@ export default class LineChart extends Component {
         display: false,
       },
     },
+    maintainAspectRatio: false,
+
     scales: {
       x: {
         ticks: {
