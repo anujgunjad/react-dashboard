@@ -58,13 +58,13 @@
 
 .row_one_graph_one {
   flex: 1 0 auto;
-  max-width: 100%;
+  max-width: 20%;
   background-color: #fff;
 }
 
 .row_one_graph_two {
   flex: 1 0 auto;
-  max-width: 100%;
+  max-width: 20%;
   background-color: #fff;
 }
 
