@@ -2,6 +2,7 @@
   padding: 2rem 3rem 0rem 29rem;
   width: 100%;
   transition: all 0.4s;
+  margin-bottom: 2rem;
 }
 
 /*Row 1 styling*/
@@ -14,18 +15,21 @@
 /*Banner 1*/
 
 .row_one_banner {
+  position: relative;
   flex: 0 0 50%;
   padding: 0rem;
-  border: 0.2rem solid black;
+
   height: 24.1rem;
   color: rgb(255, 255, 255);
+  padding-right: 1rem;
 }
 
 .banner_body {
-  position: relative;
   width: 100%;
   height: 100%;
-  background-color: var(--primary);
+  background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, 0.7));
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.428rem;
 }
 
 .banner_body_text {
@@ -74,14 +78,56 @@
 
 .row_one_graph_one {
   flex: 0 0 25%;
-  border: 0.2rem solid red;
   max-width: 25%;
+  padding: 0 1rem;
+}
+
+.chart_container_text_body {
+  padding: 1.6rem 0 0 2.5rem;
+}
+
+.chart_user_avatar {
+  width: 5rem !important;
+  height: 5rem !important;
+  background-color: var(--primary-light) !important;
+}
+
+.chart_user_emoji {
+  color: var(--primary);
+  font-size: 3rem !important;
+}
+
+.chart_user_head {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--dark-1);
+}
+
+.chart_user_text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark-1);
+}
+
+.chart_container_one {
+  width: 100%;
+  height: 24.1rem;
+  background: #fff;
+  border-radius: 0.428rem;
+  box-shadow: 0 0.1rem 0.4rem 0 rgba(85, 85, 85, 0.2),
+    0 0.2rem 1rem 0 rgba(85, 85, 85, 0.19);
+  padding: 0;
+}
+
+.chart_container_graph_body {
+  height: 100px;
+  min-height: 100px;
 }
 
 .row_one_graph_two {
   flex: 0 0 25%;
   max-width: 25%;
-  border: 0.2rem solid green;
+  padding: 0 0rem 0 1rem;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -90,26 +136,35 @@
   }
   .row_one_banner {
     flex: 0 0 100%;
+    margin-bottom: 2rem;
+    padding: 0;
   }
   .row_one_graph_one {
     flex: 0 0 50%;
     height: 24.1rem;
     max-width: 50%;
+    padding: 0 1rem 0 0;
   }
   .row_one_graph_two {
     flex: 0 0 50%;
     height: 24.1rem;
     max-width: 50%;
+    padding: 0 0 0 1rem;
   }
 }
 
 @media only screen and (max-width: 576px) {
+  .main_layout_wrp {
+    padding: 1.2rem 1.8rem;
+  }
   .row_one_graph_one {
     flex: 0 0 100%;
     max-width: 100%;
+    padding: 0;
   }
   .row_one_graph_two {
     flex: 0 0 100%;
     max-width: 100%;
+    padding: 2rem 0 0 0;
   }
 }

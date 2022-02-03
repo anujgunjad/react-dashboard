@@ -1,24 +1,25 @@
 import React, { Component, Fragment } from "react";
 import { Chart as ChartJS } from "chart.js/auto";
-import { Line } from "react-chartjs-2";
+import { Chart, Line } from "react-chartjs-2";
 
-export default class LineChart extends Component {
-  data = {
-    labels: ["January", "February", "March", "April", "May", "June"],
+const LineChart = () => {
+  const data = {
+    labels: ["January", "February", "March", "April", "May"],
 
     datasets: [
       {
-        borderColor: "yellow",
-        data: [203, 156, 99, 251, 305, 0],
+        pointStyle: "circle",
+        borderColor: "#7367f0",
+        data: [100, 116, 99, 141, 115],
         lineTension: 0.4,
       },
     ],
   };
 
-  options = {
+  const options = {
     elements: {
       point: {
-        radius: 0,
+        radius: 4,
       },
     },
     plugins: {
@@ -27,7 +28,12 @@ export default class LineChart extends Component {
       },
     },
     maintainAspectRatio: false,
-
+    animation: {
+      duration: 500,
+      easing: "linear",
+      delay: 0,
+      loop: false,
+    },
     scales: {
       x: {
         ticks: {
@@ -50,11 +56,12 @@ export default class LineChart extends Component {
       },
     },
   };
-  render() {
-    return (
-      <Fragment>
-        <Line data={this.data} options={this.options} />
-      </Fragment>
-    );
-  }
-}
+
+  return (
+    <Fragment>
+      <Line data={data} options={options} />
+    </Fragment>
+  );
+};
+
+export default LineChart;

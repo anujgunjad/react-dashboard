@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 :root {
   --primary: #7367f0;
+  --primary-light: #7267f050;
   --white: #ffffff;
   --nav_head: #565360;
+  --dark-1: rgba(0, 0, 0, 0.685);
 }
 
 * {
@@ -20,7 +22,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; /*1rem = 10px*/
 }
-
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 50.5%; /*1rem = 10px*/
+  }
+}
 ul li {
   list-style: none;
 }
