@@ -1,0 +1,36 @@
+[
+  {
+    "text_content": {
+      "icon": "group",
+      "heading": "98K",
+      "sub_heading": "Subscriber Gained",
+      "avatar_bg": "var(--primary-light)"
+    },
+
+    "chart_data": {
+      "type": "line",
+      "labels": ["January", "February", "March", "April", "May"],
+      "datasets": {
+        "borderColor": "#7367f0",
+        "data": [100, 116, 99, 141, 115]
+      }
+    }
+  },
+  {
+    "text_content": {
+      "icon": "shop",
+      "heading": "98K",
+      "sub_heading": "Subscriber Gained",
+      "avatar_bg": "var(--secondary-light)"
+    },
+
+    "chart_data": {
+      "type": "line",
+      "labels": ["January", "February", "March", "April", "May"],
+      "datasets": {
+        "borderColor": "#ff9f43",
+        "data": [100, 116, 99, 141, 115]
+      }
+    }
+  }
+]

@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Sidebar.module.css";
 import Icon from "@mui/material/Icon";
 
-const sidebarData = require("./sidebarData.json");
+const sidebarData = require("./data/sidebarData.json");
 
 const SidebarIconStyle = {
   margin: 0,

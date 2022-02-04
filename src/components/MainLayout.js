@@ -2,22 +2,17 @@ import React from "react";
 import classes from "./MainLayout.module.css";
 import Header from "./Header";
 import Card from "./UI/Card";
-import { green, pink } from "@mui/material/colors";
-import { ResponsiveContainer } from "recharts";
-import { GroupOutlined } from "@material-ui/icons";
-import { TrendingUpIcon } from "@material-ui/icons";
-import { Box } from "@material-ui/core";
-import { Button } from "@material-ui/core";
 import { Avatar } from "@material-ui/core/";
 import { EmojiEvents } from "@material-ui/icons";
-
-import StickyHeadTable from "./TableComponent";
 
 import BannerImg1 from "../assets/images/banner_dec1.png";
 import BannerImg2 from "../assets/images/banner_dec2.png";
 
 //Charts
-import LineDemo from "./Charts/lineChart";
+import LineChart from "./Charts/LineChart";
+
+//Data
+const lineChartData = require("./data/lineChartData.json");
 
 const MainLayout = () => {
   return (
@@ -27,7 +22,14 @@ const MainLayout = () => {
 
       <div className={classes.main_layout_row_one}>
         <div className={classes.row_one_banner}>
-          <div className={classes.banner_body}>
+          <Card
+            style={{
+              height: "100%",
+              padding: "0",
+              background:
+                "linear-gradient(118deg, #7367f0, rgba(115, 103, 240, 0.7))",
+            }}
+          >
             <img
               src={BannerImg1}
               className={classes.banner_one_image_one}
@@ -51,47 +53,15 @@ const MainLayout = () => {
                 your profile.
               </p>
             </div>
-          </div>
+          </Card>
         </div>
 
         <div className={classes.row_one_graph_one}>
-          <div className={classes.chart_container_one}>
-            <div className={classes.chart_container_text_body}>
-              <Avatar className={classes.chart_user_avatar}>
-                <GroupOutlined className={classes.chart_user_emoji} />
-              </Avatar>
-              <span className={classes.chart_user_head}>98K</span>
-              <span
-                className={classes.chart_user_text}
-                style={{ display: "block" }}
-              >
-                Subscriber Gained
-              </span>
-            </div>
-            <div className={classes.chart_container_graph_body}>
-              <LineDemo />
-            </div>
-          </div>
+          <LineChart data={lineChartData[0]} />
         </div>
 
         <div className={classes.row_one_graph_two}>
-          <div className={classes.chart_container_one}>
-            <div className={classes.chart_container_text_body}>
-              <Avatar className={classes.chart_user_avatar}>
-                <GroupOutlined className={classes.chart_user_emoji} />
-              </Avatar>
-              <span className={classes.chart_user_head}>98K</span>
-              <span
-                className={classes.chart_user_text}
-                style={{ display: "block" }}
-              >
-                Subscriber Gained
-              </span>
-            </div>
-            <div className={classes.chart_container_graph_body}>
-              <LineDemo />
-            </div>
-          </div>
+          <LineChart data={lineChartData[1]} />
         </div>
       </div>
     </div>

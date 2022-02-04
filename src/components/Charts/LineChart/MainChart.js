@@ -1,16 +1,16 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import { Chart as ChartJS } from "chart.js/auto";
-import { Chart, Line } from "react-chartjs-2";
+import { Chart } from "react-chartjs-2";
 
-const LineChart = () => {
+const MainChart = (props) => {
   const data = {
-    labels: ["January", "February", "March", "April", "May"],
+    labels: props.data.labels,
 
     datasets: [
       {
         pointStyle: "circle",
-        borderColor: "#7367f0",
-        data: [100, 116, 99, 141, 115],
+        borderColor: props.data.datasets.borderColor,
+        data: props.data.datasets.data,
         lineTension: 0.4,
       },
     ],
@@ -59,9 +59,9 @@ const LineChart = () => {
 
   return (
     <Fragment>
-      <Line data={data} options={options} />
+      <Chart type={props.data.type} data={data} options={options} />
     </Fragment>
   );
 };
 
-export default LineChart;
+export default MainChart;

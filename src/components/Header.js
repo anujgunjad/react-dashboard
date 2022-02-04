@@ -15,7 +15,7 @@ import Card from "./UI/Card";
 
 const Header = () => {
   return (
-    <Card style={{ marginBottom: "22px" }}>
+    <Card style={{ marginBottom: "2.2rem", paddingRight: "1.6rem" }}>
       <nav className={classes.header_wrp}>
         <div className="left_icons">
           <IconButton style={{ width: 48, height: 48 }}>
