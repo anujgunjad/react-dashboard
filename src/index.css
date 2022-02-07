@@ -6,6 +6,7 @@
   --primary-light: #7267f050;
   --white: #ffffff;
   --nav_head: #565360;
+  --dark-0: rgba(0, 0, 0, 0.835);
   --dark-1: rgba(0, 0, 0, 0.685);
 }
 
@@ -31,6 +32,10 @@ html {
 }
 ul li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {

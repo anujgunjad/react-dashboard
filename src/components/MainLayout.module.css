@@ -5,34 +5,6 @@
   margin-bottom: 2rem;
 }
 
-/*Row 1 styling*/
-
-.main_layout_row_one {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/*Banner 1*/
-
-.row_one_banner {
-  position: relative;
-  flex: 0 0 50%;
-  padding: 0rem;
-  height: 24.1rem;
-  color: rgb(255, 255, 255);
-  padding-right: 1rem;
-}
-
-/* .banner_body {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, 0.7));
-  border-radius: 0.428rem;
-  box-shadow: 0 0.1rem 0.4rem 0 rgba(85, 85, 85, 0.2),
-    0 0.2rem 1rem 0 rgba(85, 85, 85, 0.19);
-  padding: 0;
-} */
-
 .banner_body_text {
   margin-top: 2rem;
   display: inline-block;
@@ -86,18 +58,39 @@
 .row_one_graph_two {
   flex: 0 0 25%;
   max-width: 25%;
-  padding: 0 0rem 0 1rem;
+  padding: 0 0 0 1rem;
+}
+
+.bargraph_container_text h2 {
+  color: var(--dark-0);
+  font-size: 2.5rem;
+}
+
+.bargraph_container_text p {
+  color: var(--dark-0);
+  font-size: 1.5rem;
+}
+
+.bargraph_container_text h5 {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--dark-0);
+}
+
+.bargraph_container_text h5 .secondary_part {
+  font-size: 2.2rem;
+  color: rgb(42, 185, 61);
+}
+
+.doughnut_chart {
+  height: 20rem;
 }
 
 @media only screen and (max-width: 1200px) {
   .main_layout_wrp {
     padding: 2rem 3rem;
   }
-  .row_one_banner {
-    flex: 0 0 100%;
-    margin-bottom: 2rem;
-    padding: 0;
-  }
+
   .row_one_graph_one {
     flex: 0 0 50%;
     height: 24.1rem;
@@ -116,15 +109,19 @@
   .main_layout_wrp {
     padding: 1.2rem 1.8rem;
   }
+
   .row_one_graph_one {
     flex: 0 0 100%;
     max-width: 100%;
     padding: 0;
-    margin-bottom: 2rem;
   }
   .row_one_graph_two {
     flex: 0 0 100%;
     max-width: 100%;
     padding: 2rem 0 0 0;
+  }
+
+  .doughnut_chart {
+    width: 0;
   }
 }

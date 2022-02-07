@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+.left_icons {
+  display: block;
+}
+
 .right_icons {
   display: flex;
 }
@@ -35,4 +39,19 @@
 
 .profile_desc {
   font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+  .left_icons {
+    display: none;
+  }
+  .header_wrp {
+    justify-content: flex-end;
+  }
+  .profile_txt {
+    display: none;
+  }
+  .dark_mode {
+    display: none;
+  }
 }

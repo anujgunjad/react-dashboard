@@ -1,0 +1,20 @@
+[
+  {
+    "chart_data": {
+      "type": "doughnut",
+      "labels": ["January", "February", "March", "April", "May"],
+      "datasets": {
+        "data": [10, 50, 25, 70, 40],
+        "backgroundColor": [
+          "#7367f0",
+          "#7367f0",
+          "#7367f0",
+          "#ff9f43",
+          "#7367f0"
+        ],
+
+        "borderWidth": [1, 1, 1, 1, 1]
+      }
+    }
+  }
+]

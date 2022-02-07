@@ -26,6 +26,6 @@
 }
 
 .chart_container_graph_body {
-  height: 100px;
-  min-height: 100px;
+  height: 10rem;
+  min-height: 10rem;
 }

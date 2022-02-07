@@ -27,15 +27,17 @@ const Sidebar = () => {
           {/*Top Header*/}
 
           {sidebarData.data_one.map((el, i) => (
-            <li key={i} className={classes.nav_menu_itm}>
-              <Icon
-                style={SidebarIconStyle}
-                baseClassName="material-icons-outlined"
-              >
-                {el.icon}
-              </Icon>
-              <span> {el.title}</span>
-            </li>
+            <a key={i} href="#">
+              <li className={`${classes.nav_menu_itm}`}>
+                <Icon
+                  style={SidebarIconStyle}
+                  baseClassName="material-icons-outlined"
+                >
+                  {el.icon}
+                </Icon>
+                <span> {el.title}</span>
+              </li>
+            </a>
           ))}
 
           {/*Header List one*/}
@@ -45,15 +47,17 @@ const Sidebar = () => {
           </li>
 
           {sidebarData.data_two.map((el, i) => (
-            <li key={i} className={classes.nav_menu_itm}>
-              <Icon
-                style={SidebarIconStyle}
-                baseClassName="material-icons-outlined"
-              >
-                {el.icon}
-              </Icon>
-              <span> {el.title}</span>
-            </li>
+            <a key={i} href="#">
+              <li key={i} className={classes.nav_menu_itm}>
+                <Icon
+                  style={SidebarIconStyle}
+                  baseClassName="material-icons-outlined"
+                >
+                  {el.icon}
+                </Icon>
+                <span> {el.title}</span>
+              </li>
+            </a>
           ))}
 
           {/*Header List two*/}
@@ -63,15 +67,17 @@ const Sidebar = () => {
           </li>
 
           {sidebarData.data_three.map((el, i) => (
-            <li key={i} className={classes.nav_menu_itm}>
-              <Icon
-                style={SidebarIconStyle}
-                baseClassName="material-icons-outlined"
-              >
-                {el.icon}
-              </Icon>
-              <span> {el.title}</span>
-            </li>
+            <a key={i} href="#">
+              <li key={i} className={classes.nav_menu_itm}>
+                <Icon
+                  style={SidebarIconStyle}
+                  baseClassName="material-icons-outlined"
+                >
+                  {el.icon}
+                </Icon>
+                <span> {el.title}</span>
+              </li>
+            </a>
           ))}
         </ul>
       </nav>

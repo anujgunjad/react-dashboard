@@ -1,0 +1,27 @@
+.c_50 {
+  position: relative;
+  flex: 0 0 50%;
+  padding: 0rem;
+}
+
+.c_25 {
+  position: relative;
+  flex: 0 0 50%;
+  padding: 0rem;
+}
+@media only screen and (max-width: 1200px) {
+  .c_50 {
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .c_25 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 !important;
+  }
+}

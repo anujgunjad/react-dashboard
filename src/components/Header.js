@@ -15,9 +15,15 @@ import Card from "./UI/Card";
 
 const Header = () => {
   return (
-    <Card style={{ marginBottom: "2.2rem", paddingRight: "1.6rem" }}>
+    <Card
+      style={{
+        marginBottom: "2.2rem",
+        marginRight: "2rem !important",
+        paddingRight: "1.6rem",
+      }}
+    >
       <nav className={classes.header_wrp}>
-        <div className="left_icons">
+        <div className={classes.left_icons}>
           <IconButton style={{ width: 48, height: 48 }}>
             <CalendarTodayOutlinedIcon style={{ fontSize: 25 }} />
           </IconButton>
@@ -39,7 +45,7 @@ const Header = () => {
 
         <div className={classes.right_icons}>
           <div className="icon_group">
-            <IconButton>
+            <IconButton className={classes.dark_mode}>
               <DarkModeOutlinedIcon style={{ fontSize: 25 }} />
             </IconButton>
             <IconButton>
