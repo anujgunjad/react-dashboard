@@ -21,7 +21,7 @@
 }
 
 .banner_one_image_one {
-  width: 200px;
+  width: 20rem;
   top: 0;
   float: left;
 }
@@ -45,7 +45,7 @@
 }
 
 .banner_one_image_two {
-  width: 175px;
+  width: 17.5rem;
   float: right;
 }
 
@@ -59,6 +59,10 @@
   flex: 0 0 25%;
   max-width: 25%;
   padding: 0 0 0 1rem;
+}
+
+.bargraph_chart_container {
+  height: 21rem;
 }
 
 .bargraph_container_text h2 {
@@ -82,8 +86,22 @@
   color: rgb(42, 185, 61);
 }
 
+.progress_row {
+  display: flex;
+}
+
 .doughnut_chart {
   height: 20rem;
+}
+
+.progress_heading {
+  font-size: 1.3rem;
+}
+
+.tracket_data_tbl {
+  padding-top: 3.8rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -119,9 +137,11 @@
     flex: 0 0 100%;
     max-width: 100%;
     padding: 2rem 0 0 0;
+    margin-bottom: 2rem;
   }
 
   .doughnut_chart {
-    width: 0;
+    width: 100%;
+    height: 23rem;
   }
 }

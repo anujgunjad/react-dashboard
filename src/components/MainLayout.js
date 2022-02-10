@@ -6,8 +6,14 @@ import Card from "./UI/Card";
 import Row from "./UI/Row";
 import C50 from "./UI/containers/C50";
 
+import Grid from "@material-ui/core/Grid";
 import { Avatar } from "@material-ui/core/";
 import { EmojiEvents } from "@material-ui/icons";
+import { styled } from "@mui/material/styles";
+
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
 
 import { Button } from "@mui/material";
 
@@ -77,7 +83,7 @@ const MainLayout = () => {
       </Row>
 
       {/*Row two*/}
-      <Row style={{ marginTop: "4rem" }}>
+      <Row style={{ marginTop: "2rem" }}>
         <C50 style={{ paddingRight: "1rem" }}>
           <Card
             style={{
@@ -131,11 +137,50 @@ const MainLayout = () => {
                   Last 7 days
                 </p>
 
-                <div className={classes.line_chart} style={{ height: "21rem" }}>
+                <div className={classes.bargraph_chart_container}>
                   <MainChart data={barChartData[0].chart_data} />
                 </div>
               </C50>
             </Row>
+            <div className="divider"></div>
+            <Grid container spacing={4}>
+              <Grid item xs={6}>
+                <p className={classes.progress_heading}>Goal: $100000 </p>
+                <LinearProgress
+                  style={{ height: "0.8rem", borderRadius: "2rem" }}
+                  value={50}
+                  variant="determinate"
+                  title="test"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <p className={classes.progress_heading}>Users: 100.0k </p>
+                <LinearProgress
+                  style={{ height: "0.8rem", borderRadius: "2rem" }}
+                  color="secondary"
+                  value={50}
+                  variant="determinate"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <p className={classes.progress_heading}>Retention: 90% </p>
+                <LinearProgress
+                  style={{ height: "0.8rem", borderRadius: "2rem" }}
+                  value={50}
+                  variant="determinate"
+                  title="test"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <p className={classes.progress_heading}>Duration: 1yr </p>
+                <LinearProgress
+                  style={{ height: "0.8rem", borderRadius: "2rem" }}
+                  color="secondary"
+                  value={50}
+                  variant="determinate"
+                />
+              </Grid>
+            </Grid>
           </Card>
         </C50>
         <C50 style={{ paddingLeft: "1rem" }}>
@@ -154,19 +199,49 @@ const MainLayout = () => {
                 marginBottom: "1rem",
               }}
             >
-              <h2>Support Tacker</h2>
+              <h2>Support Tracker</h2>
               <h3>Last 7 Days</h3>
             </div>
 
             <div style={{ display: "flex" }}>
-              <h1 style={{ fontSize: "4rem" }}>163</h1>
+              <h1 style={{ fontSize: "4rem" }}>
+                163
+                <span
+                  style={{
+                    display: "block",
+                    textAlign: "center",
+                    marginTop: "-1.2rem",
+                    fontSize: "1.3rem",
+                  }}
+                >
+                  Tickets
+                </span>
+              </h1>
               <div className={classes.doughnut_chart} style={{ flex: "1" }}>
                 <DougnutChart data={dougnutChartData[0].chart_data} />
+              </div>
+            </div>
+
+            <div className={classes.tracket_data_tbl}>
+              <div style={{ textAlign: "center" }}>
+                <p style={{ fontSize: "1.5rem" }}>New Tickets</p>
+                <h3 style={{ fontSize: "3rem" }}>29</h3>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <p style={{ fontSize: "1.5rem" }}>Open Tickets </p>
+                <h3 style={{ fontSize: "3rem" }}>63</h3>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <p style={{ fontSize: "1.5rem" }}>Response Time </p>
+                <h3 style={{ fontSize: "3rem" }}> 1d</h3>
               </div>
             </div>
           </Card>
         </C50>
       </Row>
+
+      {/*Row three*/}
+      <Row style={{ marginTop: "2rem" }}></Row>
     </div>
   );
 };

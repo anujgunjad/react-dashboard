@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Header.module.css";
 import CalendarTodayOutlinedIcon from "@material-ui/icons/CalendarTodayOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
 import MailOutlineOutlinedIcon from "@material-ui/icons/MailOutlineOutlined";
 import BookmarkAddedOutlinedIcon from "@material-ui/icons/BookmarkBorderOutlined";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
+import ListAlt from "@material-ui/icons/ListAlt";
 
 import DarkModeOutlinedIcon from "@material-ui/icons/NightsStayOutlined";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
@@ -14,6 +15,11 @@ import { IconButton } from "@material-ui/core";
 import Card from "./UI/Card";
 
 const Header = () => {
+  const [sidebarSwitch, setSidebarSwitch] = useState(true);
+
+  const sideBarToggler = () => {
+    console.log(sidebarSwitch);
+  };
   return (
     <Card
       style={{
@@ -24,6 +30,12 @@ const Header = () => {
     >
       <nav className={classes.header_wrp}>
         <div className={classes.left_icons}>
+          <IconButton
+            style={{ width: 48, height: 48 }}
+            onClick={sideBarToggler}
+          >
+            <ListAlt style={{ fontSize: 25 }} />
+          </IconButton>
           <IconButton style={{ width: 48, height: 48 }}>
             <CalendarTodayOutlinedIcon style={{ fontSize: 25 }} />
           </IconButton>

@@ -46,9 +46,21 @@ body {
   line-height: 1.6;
 }
 
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .App {
   width: 100%;
   display: flex;
   overflow: hidden;
   position: relative;
+}
+
+.divider {
+  width: 100% !important;
+  height: 0.15rem;
+  margin: 1rem 0;
+  background-color: rgb(226, 226, 226);
 }

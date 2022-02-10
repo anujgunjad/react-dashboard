@@ -7,8 +7,10 @@
 .c_25 {
   position: relative;
   flex: 0 0 50%;
+  max-width: 50%;
   padding: 0rem;
 }
+
 @media only screen and (max-width: 1200px) {
   .c_50 {
     flex: 0 0 100%;
@@ -21,7 +23,8 @@
   .c_25 {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 2rem;
+    height: 24.1rem;
+    margin-bottom: 4rem;
     padding: 0 !important;
   }
 }

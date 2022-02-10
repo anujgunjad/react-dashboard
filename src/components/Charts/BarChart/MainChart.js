@@ -15,23 +15,20 @@ const MainChart = (props) => {
         ],
         data: props.data.datasets.data,
         barThickness: "20",
-        borderRadius: "20",
+        borderRadius: "9",
       },
     ],
   };
 
   const options = {
-    elements: {
-      point: {
-        radius: 4,
-      },
-    },
     plugins: {
       legend: {
         display: false,
       },
     },
-    maintainAspectRatio: false,
+    responsive: true,
+    maintainAspectRation: false,
+
     animation: {
       duration: 500,
       easing: "linear",
