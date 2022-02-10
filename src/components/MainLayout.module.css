@@ -104,6 +104,18 @@
   justify-content: space-between;
 }
 
+.row_three_container_one {
+  flex: 0 0 33.3%;
+}
+
+.row_three_container_two {
+  flex: 0 0 33.3%;
+}
+
+.row_three_container_three {
+  flex: 0 0 33.3%;
+}
+
 @media only screen and (max-width: 1200px) {
   .main_layout_wrp {
     padding: 2rem 3rem;
@@ -120,6 +132,19 @@
     height: 24.1rem;
     max-width: 50%;
     padding: 0 0 0 1rem;
+  }
+
+  .row_three_container_one {
+    flex: 0 0 100%;
+    padding: 0 !important;
+  }
+  .row_three_container_two {
+    flex: 0 0 100%;
+    padding: 2rem 0 0 0 !important;
+  }
+  .row_three_container_three {
+    flex: 0 0 100%;
+    padding: 2rem 0 0 0 !important;
   }
 }
 

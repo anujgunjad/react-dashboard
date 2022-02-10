@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./MainLayout.module.css";
 import Header from "./Header";
-
+import "react-calendar/dist/Calendar.css";
 import Card from "./UI/Card";
 import Row from "./UI/Row";
 import C50 from "./UI/containers/C50";
@@ -20,20 +20,31 @@ import { Button } from "@mui/material";
 import BannerImg1 from "../assets/images/banner_dec1.png";
 import BannerImg2 from "../assets/images/banner_dec2.png";
 
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+
+import Typography from "@mui/material/Typography";
+
+import StickyHeadTable from "./UI/Table";
 //Charts
 import LineChart from "./Charts/LineChart";
 import MainChart from "./Charts/BarChart/MainChart";
 import DougnutChart from "./Charts/DougnutChart/DougnutChart";
+import RaderChart from "./Charts/RadarChart/RaderChart";
+
+import VerticalLinearStepper from "./UI/StepperComp";
 //Data
 const lineChartData = require("./data/lineChartData.json");
 const barChartData = require("./data/barChartData.json");
 const dougnutChartData = require("./data/dougnutChart.json");
 
-const MainLayout = () => {
+const MainLayout = (props) => {
+  const [value, onChange] = useState(new Date());
   return (
     <div className={classes.main_layout_wrp}>
       {/*Header*/}
-      <Header />
+      <Header sidebarHandle={props.sideBarTogglerHandle} />
 
       {/*Row one*/}
       <Row>
@@ -241,7 +252,95 @@ const MainLayout = () => {
       </Row>
 
       {/*Row three*/}
-      <Row style={{ marginTop: "2rem" }}></Row>
+      <Row>
+        <div
+          className={classes.row_three_container_one}
+          style={{ paddingRight: "1rem", paddingTop: "2rem" }}
+        >
+          <Card
+            style={{
+              padding: "2rem",
+              background: "#fff",
+            }}
+          >
+            <div>
+              <h2>User Timeline</h2>
+            </div>
+            <CardMedia
+              component="img"
+              height="225"
+              image="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3489b985426981.5d7b4871b7b9d.gif"
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography
+                style={{ fontSize: "2rem" }}
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
+                User Information
+              </Typography>
+              <Typography
+                style={{ fontSize: "1.5rem" }}
+                variant="body2"
+                color="text.secondary"
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                style={{
+                  width: "2rem",
+                  height: "3rem",
+                  backgroundColor: "#7367f0",
+                  color: "#fff",
+                  fontSize: "1.4rem",
+                  fontWeight: "bold",
+
+                  textTransform: "none",
+                }}
+                size="small"
+              >
+                Share
+              </Button>
+            </CardActions>
+          </Card>
+        </div>
+        <div
+          className={classes.row_three_container_two}
+          style={{ padding: "2rem 1rem 0rem 1rem" }}
+        >
+          <Card
+            style={{
+              padding: "3rem",
+              background: "#fff",
+              height: "44rem",
+            }}
+          >
+            <RaderChart />
+          </Card>
+        </div>
+        <div
+          className={classes.row_three_container_three}
+          style={{ padding: "2rem 0rem 0rem 1rem" }}
+        >
+          <Card
+            style={{
+              padding: "3rem",
+              background: "#fff",
+              height: "44rem",
+            }}
+          >
+            <VerticalLinearStepper />
+          </Card>
+        </div>
+      </Row>
+      <Row style={{ marginTop: "2rem" }}>
+        <StickyHeadTable />
+      </Row>
     </div>
   );
 };

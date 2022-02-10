@@ -8,6 +8,8 @@
   background-color: #ffff;
   overflow-y: scroll; /* Add the ability to scroll */
   scrollbar-width: none; /* Firefox 64 */
+  z-index: 2;
+  transition: all 0.5s ease-out;
 }
 
 .sdbr_wrp::-webkit-scrollbar {
@@ -69,10 +71,4 @@
   font-family: inherit;
   font-weight: 700;
   color: #565360;
-}
-
-@media only screen and (max-width: 1200px) {
-  .sdbr_wrp {
-    display: none;
-  }
 }

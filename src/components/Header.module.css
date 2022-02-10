@@ -3,8 +3,12 @@
   justify-content: space-between;
 }
 
-.left_icons {
+.other_left_icons {
   display: block;
+}
+
+.sidebar_icon {
+  display: none;
 }
 
 .right_icons {
@@ -41,12 +45,18 @@
   font-size: 13px;
 }
 
-@media only screen and (max-width: 768px) {
-  .left_icons {
+@media only screen and (max-width: 1200px) {
+  .sidebar_icon {
+    display: block;
+  }
+  .other_left_icons {
     display: none;
   }
+}
+
+@media only screen and (max-width: 768px) {
   .header_wrp {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
   .profile_txt {
     display: none;
