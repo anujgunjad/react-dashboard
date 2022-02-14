@@ -338,6 +338,7 @@ const MainLayout = (props) => {
           </Card>
         </div>
       </Row>
+
       <Row style={{ marginTop: "2rem" }}>
         <StickyHeadTable />
       </Row>
